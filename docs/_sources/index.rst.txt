@@ -25,6 +25,9 @@ Introduction
 For a further introduction to the course, see the following pages:
 
 * :doc:`/content/introduction`
+* :doc:`/content/contact_page`
+
+
 
 
 ^^^^^^^^^^^^^^^^
@@ -50,6 +53,7 @@ Events and Additional Resources
    :titlesonly:
 
    content/introduction
+   content/contact_page
  
 
 .. toctree::
