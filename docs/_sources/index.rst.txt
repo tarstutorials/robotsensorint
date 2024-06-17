@@ -30,9 +30,11 @@ For a further introduction to the course, see the following pages:
 
 
 
+
 ^^^^^^^^^^^^^^^^
 Tutorial Modules
 ^^^^^^^^^^^^^^^^
+* :doc:`/content/robotic_setup`
 
 
 
@@ -54,6 +56,7 @@ Events and Additional Resources
 
    content/introduction
    content/contact_page
+  
  
 
 .. toctree::
