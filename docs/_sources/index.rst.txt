@@ -26,6 +26,7 @@ For a further introduction to the course, see the following pages:
 
 * :doc:`/content/introduction`
 * :doc:`/content/contact_page`
+* :doc:`/content/robotic_setup`
 
 
 
@@ -34,7 +35,7 @@ For a further introduction to the course, see the following pages:
 ^^^^^^^^^^^^^^^^
 Tutorial Modules
 ^^^^^^^^^^^^^^^^
-* :doc:`/content/robotic_setup`
+
 
 
 
@@ -56,6 +57,8 @@ Events and Additional Resources
 
    content/introduction
    content/contact_page
+   content/robotic_setup
+   
   
  
 
