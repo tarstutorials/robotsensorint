@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'RobotSensorIntegration'
-copyright = ''
+copyright = '© 2025 Ava Megyeri. Code licensed under the MIT License.'
 author = 'Ava Megyeri, Natasha Kholgade Banerjee, and Sean Banerjee'
 
 # The full version, including alpha/beta/rc tags
