@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'RobotSensorInt'
+project = 'RobotSensorIntegration'
 copyright = ''
 author = 'Ava Megyeri, Natasha Kholgade Banerjee, and Sean Banerjee'
 

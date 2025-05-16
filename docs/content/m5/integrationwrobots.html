@@ -1,0 +1,546 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Integration with Robotics &mdash; RobotSensorIntegration 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+
+  
+    <link rel="shortcut icon" href="../../_static/tars_logo_sq.png"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=e031e9a9"></script>
+      <script src="../../_static/doctools.js?v=888ff710"></script>
+      <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="https://cdn.jsdelivr.net/gh/bonartm/quizdown-js@latest/public/build/quizdown.js"></script>
+      <script>quizdown.init({"primary_color": "#31b457", "quizdown_js": "https://cdn.jsdelivr.net/gh/bonartm/quizdown-js@latest/public/build/quizdown.js"});</script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Troubleshooting Resources" href="../m6/troubleshooting.html" />
+    <link rel="prev" title="Data Collection with Physiological Sensors" href="../m4/physiologicalsensors.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #292929                    " >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            RobotSensorIntegration
+              <img src="../../_static/tars_logo_sq.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../m1/introduction.html">Introduction to the course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../m1/contact_page.html">Contact the Authors</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorial Modules</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../m2/robotic_setup.html">Getting Started with Kinova</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../m4/physiologicalsensors.html">Data Collection with Physiological Sensors</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Integration with Robotics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#creating-robotic-handover-project">Creating Robotic Handover Project</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Additional Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../m6/troubleshooting.html">Troubleshooting Resources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #292929                    " >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">RobotSensorIntegration</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Integration with Robotics</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/content/m5/integrationwrobots.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../m4/physiologicalsensors.html" class="btn btn-neutral float-left" title="Data Collection with Physiological Sensors" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../m6/troubleshooting.html" class="btn btn-neutral float-right" title="Troubleshooting Resources" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="integration-with-robotics">
+<h1>Integration with Robotics<a class="headerlink" href="#integration-with-robotics" title="Permalink to this heading"></a></h1>
+<p>Now that you have successfully setup the Kinova API and Delsys API, you can now integrate them both together.</p>
+<section id="creating-robotic-handover-project">
+<h2>Creating Robotic Handover Project<a class="headerlink" href="#creating-robotic-handover-project" title="Permalink to this heading"></a></h2>
+<p>Its finally time to combine the Kinova and Delsys API.
+The goal is to create a robot-to-human handover where the robot grabs the object and uses sensor based thresholding to detect when to release the object into your hand.</p>
+<p>This section walks you through the entire process, explaining each part of code and its purpose.
+You can follow the steps below or clone the repo to access the complete code.</p>
+<ol class="arabic">
+<li><p>Imports</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">clr</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">threading</span>
+<span class="kn">import</span> <span class="nn">utilities</span>
+<span class="kn">from</span> <span class="nn">kortex_api.autogen.client_stubs.BaseClientRpc</span> <span class="kn">import</span> <span class="n">BaseClient</span>
+<span class="kn">from</span> <span class="nn">kortex_api.autogen.messages</span> <span class="kn">import</span> <span class="n">Base_pb2</span>
+<span class="kn">from</span> <span class="nn">kortex_api.autogen.client_stubs.BaseCyclicClientRpc</span> <span class="kn">import</span> <span class="n">BaseCyclicClient</span>
+<span class="n">clr</span><span class="o">.</span><span class="n">AddReference</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;..\DelsysAPI.dll&quot;</span><span class="p">)</span>
+<span class="n">clr</span><span class="o">.</span><span class="n">AddReference</span><span class="p">(</span><span class="s2">&quot;System.Collections&quot;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">Aero</span> <span class="kn">import</span> <span class="n">AeroPy</span>
+</pre></div>
+</div>
+<p>These are all the imports we want to add. <cite>BaseClient</cite>, <cite>Base_pb2</cite>, <cite>BaseCyclicClient</cite> are used in the Kinova API to connect to the Base of the robot, and send commands to get information about the robot, move the robot, and close the gripper.
+The <cite>clr</cite> module allows us to interface with the Delsys <cite>.dll</cite> package, which is essential for accessing the AeroPy API.</p>
+</div></blockquote>
+</li>
+<li><p>License and Key</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;&lt;Your_Key_Here&gt;&quot;</span>
+<span class="n">license_num</span> <span class="o">=</span> <span class="s2">&quot;&lt;Your_License_Here&gt;&quot;</span>
+</pre></div>
+</div>
+<p>Import your key and license number from Delsys. These are required to validate and use the AeroPy API.</p>
+</div></blockquote>
+</li>
+<li><p>Delsys API Functions</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;Delsys API Section&quot;&quot;&quot;</span>
+<span class="k">class</span> <span class="nc">TrignoBase</span><span class="p">():</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">BaseInstance</span> <span class="o">=</span> <span class="n">AeroPy</span><span class="p">()</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Scan for sensors function</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="k">def</span> <span class="nf">scan_for_sensors</span><span class="p">(</span><span class="n">TrigBase</span><span class="p">):</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="n">TrigBase</span><span class="o">.</span><span class="n">ScanSensors</span><span class="p">()</span><span class="o">.</span><span class="n">Result</span>
+    <span class="n">all_scanned_sensors</span> <span class="o">=</span> <span class="n">TrigBase</span><span class="o">.</span><span class="n">GetScannedSensorsFound</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sensors Found:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">sensor</span> <span class="ow">in</span> <span class="n">all_scanned_sensors</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;(&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">sensor</span><span class="o">.</span><span class="n">PairNumber</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;) &quot;</span> <span class="o">+</span>
+            <span class="n">sensor</span><span class="o">.</span><span class="n">FriendlyName</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+            <span class="n">sensor</span><span class="o">.</span><span class="n">Configuration</span><span class="o">.</span><span class="n">ModeString</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">SensorCount</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">all_scanned_sensors</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">SensorCount</span><span class="p">):</span>
+        <span class="n">TrigBase</span><span class="o">.</span><span class="n">SelectSensor</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Outputs the data with PollData()</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="k">def</span> <span class="nf">GetData</span><span class="p">(</span><span class="n">TrigBase</span><span class="p">):</span>
+    <span class="n">dataReady</span> <span class="o">=</span> <span class="n">TrigBase</span><span class="o">.</span><span class="n">CheckDataQueue</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">dataReady</span><span class="p">:</span>
+
+        <span class="n">DataOut</span> <span class="o">=</span> <span class="n">TrigBase</span><span class="o">.</span><span class="n">PollData</span><span class="p">()</span>
+        <span class="n">outArr</span> <span class="o">=</span> <span class="p">[[]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">DataOut</span><span class="o">.</span><span class="n">Keys</span><span class="p">))]</span>             <span class="c1"># Set output array size to the amount of channels being outputted from the DelsysAPI</span>
+
+        <span class="n">channel_guid_keys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">DataOut</span><span class="o">.</span><span class="n">Keys</span><span class="p">)</span>                      <span class="c1"># Generate a list of all channel GUIDs in the dictionary</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">DataOut</span><span class="o">.</span><span class="n">Keys</span><span class="p">)):</span>                          <span class="c1"># loop all channels</span>
+            <span class="n">chan_data</span> <span class="o">=</span> <span class="n">DataOut</span><span class="p">[</span><span class="n">channel_guid_keys</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span>               <span class="c1"># Index a single channels data from the dictionary based on unique channel GUID (key)</span>
+            <span class="n">outArr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">chan_data</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;object&#39;</span><span class="p">))</span> <span class="c1"># Create a NumPy array of the channel data and add to the output array</span>
+
+        <span class="c1"># Dictionary&lt;Guid, List&lt;double&gt;&gt; (key = Guid (Unique channel ID), value = List(Y) (Y = sample value)</span>
+        <span class="k">return</span> <span class="n">outArr</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+</pre></div>
+</div>
+<p>The <cite>TrignoBase</cite> class initializes the AeroPy instance. <cite>scan_for_sensors</cite> scans and prints out all sensors available. It will then select paired sensors. <cite>GetData</cite> retrieves sensor data if available and processes it channel by channel returning the array of data.</p>
+</div></blockquote>
+</li>
+<li><p>Kinova API Functions</p>
+<blockquote>
+<div><p>This is the largest section, so we’ll break it down:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;Kinova API Section&quot;&quot;&quot;</span>
+<span class="k">class</span> <span class="nc">GripperCommandExample</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">router</span><span class="p">,</span> <span class="n">proportional_gain</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">proportional_gain</span> <span class="o">=</span> <span class="n">proportional_gain</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">router</span> <span class="o">=</span> <span class="n">router</span>
+
+        <span class="c1"># Create base client using TCP router</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">base</span> <span class="o">=</span> <span class="n">BaseClient</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">router</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">close_gripper</span><span class="p">(</span><span class="n">base</span><span class="p">):</span>
+    <span class="n">gripper_command</span> <span class="o">=</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">GripperCommand</span><span class="p">()</span>
+    <span class="n">gripper_command</span><span class="o">.</span><span class="n">mode</span> <span class="o">=</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">GRIPPER_POSITION</span>
+    <span class="n">finger</span> <span class="o">=</span> <span class="n">gripper_command</span><span class="o">.</span><span class="n">gripper</span><span class="o">.</span><span class="n">finger</span><span class="o">.</span><span class="n">add</span><span class="p">()</span>
+    <span class="n">finger</span><span class="o">.</span><span class="n">finger_identifier</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">finger</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mf">1.0</span>  <span class="c1"># Fully closed position</span>
+
+    <span class="n">base</span><span class="o">.</span><span class="n">SendGripperCommand</span><span class="p">(</span><span class="n">gripper_command</span><span class="p">)</span>
+
+    <span class="c1"># Wait for a short period to ensure the gripper has time to close</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="kc">True</span>
+<span class="k">def</span> <span class="nf">open_gripper</span><span class="p">(</span><span class="n">base</span><span class="p">):</span>
+    <span class="n">gripper_command</span> <span class="o">=</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">GripperCommand</span><span class="p">()</span>
+    <span class="n">gripper_command</span><span class="o">.</span><span class="n">mode</span> <span class="o">=</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">GRIPPER_POSITION</span>
+    <span class="n">finger</span> <span class="o">=</span> <span class="n">gripper_command</span><span class="o">.</span><span class="n">gripper</span><span class="o">.</span><span class="n">finger</span><span class="o">.</span><span class="n">add</span><span class="p">()</span>
+    <span class="n">finger</span><span class="o">.</span><span class="n">finger_identifier</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">finger</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mf">0.0</span>  <span class="c1"># Fully closed position</span>
+
+    <span class="n">base</span><span class="o">.</span><span class="n">SendGripperCommand</span><span class="p">(</span><span class="n">gripper_command</span><span class="p">)</span>
+
+    <span class="c1"># Wait for a short period to ensure the gripper has time to close</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="kc">True</span>
+</pre></div>
+</div>
+<p>These commands are straightforward: <cite>close_gripper</cite> and <cite>open_gripper</cite> fully close or open the gripper.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">check_for_end_or_abort</span><span class="p">(</span><span class="n">e</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return a closure checking for END or ABORT notifications</span>
+
+<span class="sd">    Arguments:</span>
+<span class="sd">    e -- event to signal when the action is completed</span>
+<span class="sd">        (will be set when an END or ABORT occurs)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="n">notification</span><span class="p">,</span> <span class="n">e</span> <span class="o">=</span> <span class="n">e</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;EVENT : &quot;</span> <span class="o">+</span> \
+            <span class="n">Base_pb2</span><span class="o">.</span><span class="n">ActionEvent</span><span class="o">.</span><span class="n">Name</span><span class="p">(</span><span class="n">notification</span><span class="o">.</span><span class="n">action_event</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">notification</span><span class="o">.</span><span class="n">action_event</span> <span class="o">==</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">ACTION_END</span> \
+        <span class="ow">or</span> <span class="n">notification</span><span class="o">.</span><span class="n">action_event</span> <span class="o">==</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">ACTION_ABORT</span><span class="p">:</span>
+            <span class="n">e</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>
+            <span class="c1"># print(notification)</span>
+    <span class="k">return</span> <span class="n">check</span>
+    <span class="n">TIMEOUT_DURATION</span> <span class="o">=</span> <span class="mi">30</span>
+</pre></div>
+</div>
+<p>This function waits for feedback from the robot. The program wont proceed until a motion is fully executed.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">example_move_to_home_position</span><span class="p">(</span><span class="n">base</span><span class="p">):</span>
+    <span class="c1"># Make sure the arm is in Single Level Servoing mode</span>
+    <span class="n">base_servo_mode</span> <span class="o">=</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">ServoingModeInformation</span><span class="p">()</span>
+    <span class="n">base_servo_mode</span><span class="o">.</span><span class="n">servoing_mode</span> <span class="o">=</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">SINGLE_LEVEL_SERVOING</span>
+    <span class="n">base</span><span class="o">.</span><span class="n">SetServoingMode</span><span class="p">(</span><span class="n">base_servo_mode</span><span class="p">)</span>
+
+    <span class="c1"># Move arm to ready position</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Moving the arm to a safe position&quot;</span><span class="p">)</span>
+    <span class="n">action_type</span> <span class="o">=</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">RequestedActionType</span><span class="p">()</span>
+    <span class="n">action_type</span><span class="o">.</span><span class="n">action_type</span> <span class="o">=</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">REACH_JOINT_ANGLES</span>
+    <span class="n">action_list</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">ReadAllActions</span><span class="p">(</span><span class="n">action_type</span><span class="p">)</span>
+    <span class="n">action_handle</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">for</span> <span class="n">action</span> <span class="ow">in</span> <span class="n">action_list</span><span class="o">.</span><span class="n">action_list</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">action</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;Home&quot;</span><span class="p">:</span>
+            <span class="n">action_handle</span> <span class="o">=</span> <span class="n">action</span><span class="o">.</span><span class="n">handle</span>
+
+    <span class="k">if</span> <span class="n">action_handle</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Can&#39;t reach safe position. Exiting&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="n">e</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Event</span><span class="p">()</span>
+    <span class="n">notification_handle</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">OnNotificationActionTopic</span><span class="p">(</span>
+        <span class="n">check_for_end_or_abort</span><span class="p">(</span><span class="n">e</span><span class="p">),</span>
+        <span class="n">Base_pb2</span><span class="o">.</span><span class="n">NotificationOptions</span><span class="p">()</span>
+    <span class="p">)</span>
+
+    <span class="n">base</span><span class="o">.</span><span class="n">ExecuteActionFromReference</span><span class="p">(</span><span class="n">action_handle</span><span class="p">)</span>
+    <span class="n">finished</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="n">TIMEOUT_DURATION</span><span class="p">)</span>
+    <span class="n">base</span><span class="o">.</span><span class="n">Unsubscribe</span><span class="p">(</span><span class="n">notification_handle</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">finished</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Safe position reached&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Timeout on action notification wait&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">finished</span>
+</pre></div>
+</div>
+<p>This moves the Kinova arm to the home position.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">populateCartesianCoordinate</span><span class="p">(</span><span class="n">waypointInformation</span><span class="p">):</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">waypointInformation</span><span class="p">)</span>
+    <span class="n">waypoint</span> <span class="o">=</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">CartesianWaypoint</span><span class="p">()</span>
+    <span class="n">waypoint</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">waypointInformation</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">waypoint</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">waypointInformation</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">waypoint</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="n">waypointInformation</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">waypoint</span><span class="o">.</span><span class="n">blending_radius</span> <span class="o">=</span> <span class="n">waypointInformation</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+    <span class="n">waypoint</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">theta_x</span> <span class="o">=</span> <span class="n">waypointInformation</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+    <span class="n">waypoint</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">theta_y</span> <span class="o">=</span> <span class="n">waypointInformation</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+    <span class="n">waypoint</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">theta_z</span> <span class="o">=</span> <span class="n">waypointInformation</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
+    <span class="n">waypoint</span><span class="o">.</span><span class="n">reference_frame</span> <span class="o">=</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">CARTESIAN_REFERENCE_FRAME_BASE</span>
+
+    <span class="k">return</span> <span class="n">waypoint</span>
+
+<span class="k">def</span> <span class="nf">start_position</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">base_cyclic</span><span class="p">):</span>
+    <span class="n">base_servo_mode</span> <span class="o">=</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">ServoingModeInformation</span><span class="p">()</span>
+    <span class="n">base_servo_mode</span><span class="o">.</span><span class="n">servoing_mode</span> <span class="o">=</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">SINGLE_LEVEL_SERVOING</span>
+    <span class="n">base</span><span class="o">.</span><span class="n">SetServoingMode</span><span class="p">(</span><span class="n">base_servo_mode</span><span class="p">)</span>
+    <span class="n">product</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetProductConfiguration</span><span class="p">()</span>
+    <span class="n">waypointsDefinition</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">tuple</span><span class="p">())</span>
+    <span class="k">if</span> <span class="n">product</span><span class="o">.</span><span class="n">model</span> <span class="o">==</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">ProductConfiguration__pb2</span><span class="o">.</span><span class="n">MODEL_ID_L53</span><span class="p">:</span>
+        <span class="n">waypointsDefinition</span> <span class="o">=</span> <span class="p">((</span><span class="mf">0.451</span><span class="p">,</span> <span class="mf">.004</span><span class="p">,</span> <span class="mf">.081</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">139.961</span><span class="p">,</span> <span class="mf">.263</span><span class="p">,</span> <span class="mf">90.88</span><span class="p">),)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Product is not compatible to run this example. Please contact support with the KIN number below&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Product KIN is : &quot;</span> <span class="o">+</span> <span class="n">product</span><span class="o">.</span><span class="n">kin</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="n">waypoints</span> <span class="o">=</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">WaypointList</span><span class="p">()</span>
+    <span class="n">waypoints</span><span class="o">.</span><span class="n">duration</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="n">waypoints</span><span class="o">.</span><span class="n">use_optimal_blending</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">waypoint</span> <span class="o">=</span> <span class="n">waypoints</span><span class="o">.</span><span class="n">waypoints</span><span class="o">.</span><span class="n">add</span><span class="p">()</span>
+    <span class="n">waypoint</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;waypoint_&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+    <span class="n">waypoint</span><span class="o">.</span><span class="n">cartesian_waypoint</span><span class="o">.</span><span class="n">CopyFrom</span><span class="p">(</span><span class="n">populateCartesianCoordinate</span><span class="p">(</span><span class="n">waypointsDefinition</span><span class="p">[</span><span class="n">index</span><span class="p">]))</span>
+
+    <span class="c1"># Verify validity of waypoints</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">ValidateWaypointList</span><span class="p">(</span><span class="n">waypoints</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">trajectory_error_report</span><span class="o">.</span><span class="n">trajectory_error_elements</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">e</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Event</span><span class="p">()</span>
+        <span class="n">notification_handle</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">OnNotificationActionTopic</span><span class="p">(</span>
+            <span class="n">check_for_end_or_abort</span><span class="p">(</span><span class="n">e</span><span class="p">),</span>
+            <span class="n">Base_pb2</span><span class="o">.</span><span class="n">NotificationOptions</span><span class="p">()</span>
+        <span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Moving cartesian trajectory...&quot;</span><span class="p">)</span>
+        <span class="n">base</span><span class="o">.</span><span class="n">ExecuteWaypointTrajectory</span><span class="p">(</span><span class="n">waypoints</span><span class="p">)</span>
+        <span class="n">finished</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="n">TIMEOUT_DURATION</span><span class="p">)</span>
+        <span class="n">base</span><span class="o">.</span><span class="n">Unsubscribe</span><span class="p">(</span><span class="n">notification_handle</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">finished</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cartesian trajectory completed&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Timeout on action notification wait&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error found in trajectory&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">False</span>
+</pre></div>
+</div>
+<p><cite>populateCartesianCoordinate</cite> is used to take in a tuple of position and orientation values and returns a cartesian waypoint object that the robot uses in its trajectory planning. <cite>start_position</cite> calls this function with a predefined location to construct this waypoint to move to the object location.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">end_example</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">base_cyclic</span><span class="p">):</span>
+    <span class="n">base_servo_mode</span> <span class="o">=</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">ServoingModeInformation</span><span class="p">()</span>
+    <span class="n">base_servo_mode</span><span class="o">.</span><span class="n">servoing_mode</span> <span class="o">=</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">SINGLE_LEVEL_SERVOING</span>
+    <span class="n">base</span><span class="o">.</span><span class="n">SetServoingMode</span><span class="p">(</span><span class="n">base_servo_mode</span><span class="p">)</span>
+    <span class="n">product</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetProductConfiguration</span><span class="p">()</span>
+    <span class="n">waypointsDefinition</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">tuple</span><span class="p">())</span>
+    <span class="k">if</span> <span class="n">product</span><span class="o">.</span><span class="n">model</span> <span class="o">==</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">ProductConfiguration__pb2</span><span class="o">.</span><span class="n">MODEL_ID_L53</span><span class="p">:</span>
+        <span class="n">waypointsDefinition</span> <span class="o">=</span> <span class="p">((</span><span class="mf">0.655</span><span class="p">,</span> <span class="mf">.001</span><span class="p">,</span> <span class="mf">.345</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">140.222</span><span class="p">,</span> <span class="mf">.263</span><span class="p">,</span> <span class="mf">90.885</span><span class="p">),)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Product is not compatible to run this example. Please contact support with the KIN number below&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Product KIN is : &quot;</span> <span class="o">+</span> <span class="n">product</span><span class="o">.</span><span class="n">kin</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="n">waypoints</span> <span class="o">=</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">WaypointList</span><span class="p">()</span>
+    <span class="n">waypoints</span><span class="o">.</span><span class="n">duration</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="n">waypoints</span><span class="o">.</span><span class="n">use_optimal_blending</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">waypoint</span> <span class="o">=</span> <span class="n">waypoints</span><span class="o">.</span><span class="n">waypoints</span><span class="o">.</span><span class="n">add</span><span class="p">()</span>
+    <span class="n">waypoint</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;waypoint_&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+    <span class="n">waypoint</span><span class="o">.</span><span class="n">cartesian_waypoint</span><span class="o">.</span><span class="n">CopyFrom</span><span class="p">(</span><span class="n">populateCartesianCoordinate</span><span class="p">(</span><span class="n">waypointsDefinition</span><span class="p">[</span><span class="n">index</span><span class="p">]))</span>
+
+    <span class="c1"># Verify validity of waypoints</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">ValidateWaypointList</span><span class="p">(</span><span class="n">waypoints</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">trajectory_error_report</span><span class="o">.</span><span class="n">trajectory_error_elements</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">e</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Event</span><span class="p">()</span>
+        <span class="n">notification_handle</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">OnNotificationActionTopic</span><span class="p">(</span>
+            <span class="n">check_for_end_or_abort</span><span class="p">(</span><span class="n">e</span><span class="p">),</span>
+            <span class="n">Base_pb2</span><span class="o">.</span><span class="n">NotificationOptions</span><span class="p">()</span>
+        <span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Moving cartesian trajectory...&quot;</span><span class="p">)</span>
+        <span class="n">base</span><span class="o">.</span><span class="n">ExecuteWaypointTrajectory</span><span class="p">(</span><span class="n">waypoints</span><span class="p">)</span>
+        <span class="n">finished</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="n">TIMEOUT_DURATION</span><span class="p">)</span>
+        <span class="n">base</span><span class="o">.</span><span class="n">Unsubscribe</span><span class="p">(</span><span class="n">notification_handle</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">finished</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cartesian trajectory completed&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Timeout on action notification wait&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error found in trajectory&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">False</span>
+</pre></div>
+</div>
+<p>This works the same as start position, but moves the robot to a predefined end location where the user is waiting for the object.</p>
+</div></blockquote>
+</li>
+<li><p>Combining Kinova and Delsys</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">configure_and_stream</span><span class="p">(</span><span class="n">TrigBase</span><span class="p">,</span> <span class="n">base</span><span class="p">,</span> <span class="n">base_cyclic</span><span class="p">,</span> <span class="n">holding_max</span><span class="p">):</span>
+    <span class="n">success</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">TrigBase</span><span class="o">.</span><span class="n">Configure</span><span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+    <span class="n">ready_to_start</span> <span class="o">=</span> <span class="n">TrigBase</span><span class="o">.</span><span class="n">IsPipelineConfigured</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Is pipeline configured for data streaming: </span><span class="si">{</span><span class="n">ready_to_start</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">threshold</span> <span class="o">=</span> <span class="p">(</span><span class="n">holding_max</span> <span class="o">*</span> <span class="mf">.9</span><span class="p">)</span>
+    <span class="n">threshold_flag</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">if</span> <span class="n">ready_to_start</span><span class="p">:</span>
+        <span class="n">TrigBase</span><span class="o">.</span><span class="n">Start</span><span class="p">()</span>
+        <span class="n">success</span> <span class="o">&amp;=</span> <span class="n">example_move_to_home_position</span><span class="p">(</span><span class="n">base</span><span class="p">)</span>
+        <span class="n">success</span> <span class="o">&amp;=</span> <span class="n">start_position</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">base_cyclic</span><span class="p">)</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">success</span> <span class="o">&amp;=</span> <span class="n">close_gripper2</span><span class="p">(</span><span class="n">base</span><span class="p">)</span>
+        <span class="n">success</span> <span class="o">&amp;=</span> <span class="n">end_example</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">base_cyclic</span><span class="p">)</span>
+
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">.5</span><span class="p">)</span>
+        <span class="k">while</span> <span class="n">threshold_flag</span><span class="p">:</span>
+            <span class="n">Dataout</span> <span class="o">=</span> <span class="n">GetData</span><span class="p">(</span><span class="n">TrigBase</span><span class="o">=</span><span class="n">TrigBase</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">Dataout</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+
+                <span class="nb">print</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">Dataout</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]))</span>
+                <span class="k">if</span> <span class="nb">max</span><span class="p">(</span><span class="n">Dataout</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span> <span class="o">&gt;=</span> <span class="n">holding_max</span><span class="p">:</span>
+                    <span class="k">continue</span>
+                <span class="k">if</span> <span class="nb">max</span><span class="p">(</span><span class="n">Dataout</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span> <span class="o">&gt;=</span> <span class="n">threshold</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">Dataout</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]))</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;threshold reached&quot;</span><span class="p">)</span>
+                    <span class="c1">#we open the gripper here</span>
+                    <span class="n">success</span> <span class="o">&amp;=</span> <span class="n">open_gripper</span><span class="p">(</span><span class="n">base</span><span class="p">)</span>
+                    <span class="n">success</span> <span class="o">&amp;=</span> <span class="n">example_move_to_home_position</span><span class="p">(</span><span class="n">base</span><span class="p">)</span>
+                    <span class="n">threshold_flag</span> <span class="o">=</span> <span class="kc">False</span>
+
+        <span class="n">TrigBase</span><span class="o">.</span><span class="n">Stop</span><span class="p">()</span>
+        <span class="n">TrigBase</span><span class="o">.</span><span class="n">ResetPipeline</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">success</span>
+</pre></div>
+</div>
+<p>This function integrates the Kinova robotic arm and Delsys Trigno EMG system. It starts the EMG stream, moves the robot to pick up an object, and holds it until the user’s EMG activity drops below a calculated threshold, at which point the robot releases the object and returns to home.</p>
+</div></blockquote>
+</li>
+<li><p>Get Thresholds</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_thresholds</span><span class="p">(</span><span class="n">TrigBase</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-----Getting Thresholds-----&quot;</span><span class="p">)</span>
+    <span class="n">TrigBase</span><span class="o">.</span><span class="n">ValidateBase</span><span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">license</span><span class="p">)</span>
+
+    <span class="c1"># select the sensor used</span>
+    <span class="n">scan_for_sensors</span><span class="p">(</span><span class="n">TrigBase</span><span class="p">)</span>
+
+    <span class="n">TrigBase</span><span class="o">.</span><span class="n">Configure</span><span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+    <span class="n">ready_to_start</span> <span class="o">=</span> <span class="n">TrigBase</span><span class="o">.</span><span class="n">IsPipelineConfigured</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Is pipeline configured for data streaming: </span><span class="si">{</span><span class="n">ready_to_start</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="n">max_flag</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">if</span> <span class="n">ready_to_start</span><span class="p">:</span>
+        <span class="n">TrigBase</span><span class="o">.</span><span class="n">Start</span><span class="p">()</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">.7</span><span class="p">)</span>
+
+        <span class="k">while</span> <span class="n">max_flag</span><span class="p">:</span>
+            <span class="n">Dataout</span> <span class="o">=</span> <span class="n">GetData</span><span class="p">(</span><span class="n">TrigBase</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">Dataout</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">max</span><span class="p">(</span><span class="n">Dataout</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">:</span>
+                        <span class="k">continue</span>
+                <span class="c1">#get resting max</span>
+                <span class="n">holding_max</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">Dataout</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">holding_max</span><span class="p">)</span>
+                <span class="n">max_flag</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="n">TrigBase</span><span class="o">.</span><span class="n">Stop</span><span class="p">()</span>
+    <span class="n">TrigBase</span><span class="o">.</span><span class="n">ResetPipeline</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-----Complete-----&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">holding_max</span>
+</pre></div>
+</div>
+<p><cite>get_thresholds</cite> is the function to determine the users muscle activation threshold. It works by collecting the data once the sensors are ready, it then enters a loop of continously getting data looking for the maximum EMG value that is not higher than 1. 1 is used because anything higher than that could just be users movement or noise and the robot would never release the object.
+The holding max is returned and used in other functions such as <cite>configure_and_stream</cite>.</p>
+</div></blockquote>
+</li>
+<li><p>Main</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># Delsys API setup</span>
+    <span class="n">base</span> <span class="o">=</span> <span class="n">TrignoBase</span><span class="p">()</span>
+    <span class="n">TrigBase</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">BaseInstance</span>
+
+    <span class="c1"># Get thresholding needed</span>
+    <span class="n">holding_max</span> <span class="o">=</span> <span class="n">get_thresholds</span><span class="p">(</span><span class="n">TrigBase</span><span class="p">)</span>
+
+    <span class="c1"># Parse arguments</span>
+    <span class="n">args</span> <span class="o">=</span> <span class="n">utilities</span><span class="o">.</span><span class="n">parseConnectionArguments</span><span class="p">()</span>
+
+    <span class="c1"># Create connection to the device and get the router</span>
+    <span class="k">with</span> <span class="n">utilities</span><span class="o">.</span><span class="n">DeviceConnection</span><span class="o">.</span><span class="n">createTcpConnection</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="k">as</span> <span class="n">router</span><span class="p">:</span>
+        <span class="c1"># Create required services</span>
+        <span class="n">base</span> <span class="o">=</span> <span class="n">BaseClient</span><span class="p">(</span><span class="n">router</span><span class="p">)</span>
+        <span class="n">base_cyclic</span> <span class="o">=</span> <span class="n">BaseCyclicClient</span><span class="p">(</span><span class="n">router</span><span class="p">)</span>
+
+        <span class="n">success</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="n">success</span> <span class="o">&amp;=</span> <span class="n">configure_and_stream</span><span class="p">(</span><span class="n">TrigBase</span><span class="p">,</span> <span class="n">base</span><span class="p">,</span> <span class="n">base_cyclic</span><span class="p">,</span> <span class="n">holding_max</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">success</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;An error occurred during the execution.&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>This is the main code which starts the pipeline. We make sure to connect to the base and get the threshold. Once we connect to the robot we start our pipeline with <cite>configure_and_stream</cite>.</p>
+</div></blockquote>
+</li>
+</ol>
+<p>You have now built a complete robot-to-human handover pipeline with the sEMG sensors! Once you’re connected to the Kinova robot and Trigno base, run your script to see it work.
+From here, you have the opportunity to build onto this framework to suit your own applications. I hope this tutorial helped you get your sensors set up in Python. Good luck on your projects!</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../m4/physiologicalsensors.html" class="btn btn-neutral float-left" title="Data Collection with Physiological Sensors" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../m6/troubleshooting.html" class="btn btn-neutral float-right" title="Troubleshooting Resources" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

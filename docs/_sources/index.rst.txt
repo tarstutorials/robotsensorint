@@ -4,9 +4,12 @@
    contain the root `toctree` directive.
 
 Welcome to Robot Sensor Integration!
-=================================
+============================================================================================
 
-This is a set of free online tutorials on integrating physiological sensing into Robotics.
+This is a set of free online tutorials on integrating physiological sensing into Robotics applications.
+These tutorials are intended for a wide audience --- from health care professionals with little programming experience, 
+to software developers new to wearable health sensors, and students exploring opportunities in these rapidly expanding fields. 
+While the examples focus on the Kinova Gen3 robotic arm, the concepts and methods can be adapted to work with virtually any robotic platform that provides an API, making this a flexible resource for a wide range of projects.
 
 ----------------
 Acknowledgements
@@ -24,26 +27,25 @@ Introduction
 
 For a further introduction to the course, see the following pages:
 
-* :doc:`/content/introduction`
-* :doc:`/content/contact_page`
-* :doc:`/content/robotic_setup`
-
-
-
-
+* :doc:`/content/m1/introduction`
+* :doc:`/content/m1/contact_page`
 
 ^^^^^^^^^^^^^^^^
 Tutorial Modules
 ^^^^^^^^^^^^^^^^
+The core tutorial modules are split into 4 parts:
+
+* :doc:`/content/m2/robotic_setup`
+* :doc:`/content/m4/physiologicalsensors`
+* :doc:`/content/m5/integrationwrobots`
 
 
 
 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Events and Additional Resources
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
+^^^^^^^^^^^^^^^^^^^^
+Additional Resources
+^^^^^^^^^^^^^^^^^^^^
+* :doc:`/content/m6/troubleshooting`
 
 
 
@@ -55,9 +57,8 @@ Events and Additional Resources
    :hidden:
    :titlesonly:
 
-   content/introduction
-   content/contact_page
-   content/robotic_setup
+   content/m1/introduction
+   content/m1/contact_page
    
   
  
@@ -67,10 +68,15 @@ Events and Additional Resources
    :hidden:
    :caption: Tutorial Modules
 
+   content/m2/robotic_setup
+   content/m4/physiologicalsensors
+   content/m5/integrationwrobots
+
  
 
 .. toctree::
    :maxdepth: 1
    :hidden:
-   :caption: Events and Additional Resources
+   :caption: Additional Resources
    
+   content/m6/troubleshooting

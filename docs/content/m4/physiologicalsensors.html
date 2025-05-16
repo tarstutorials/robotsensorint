@@ -1,0 +1,190 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Collection with Physiological Sensors &mdash; RobotSensorIntegration 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+
+  
+    <link rel="shortcut icon" href="../../_static/tars_logo_sq.png"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=e031e9a9"></script>
+      <script src="../../_static/doctools.js?v=888ff710"></script>
+      <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="https://cdn.jsdelivr.net/gh/bonartm/quizdown-js@latest/public/build/quizdown.js"></script>
+      <script>quizdown.init({"primary_color": "#31b457", "quizdown_js": "https://cdn.jsdelivr.net/gh/bonartm/quizdown-js@latest/public/build/quizdown.js"});</script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Integration with Robotics" href="../m5/integrationwrobots.html" />
+    <link rel="prev" title="Getting Started with Kinova" href="../m2/robotic_setup.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #292929                    " >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            RobotSensorIntegration
+              <img src="../../_static/tars_logo_sq.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../m1/introduction.html">Introduction to the course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../m1/contact_page.html">Contact the Authors</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorial Modules</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../m2/robotic_setup.html">Getting Started with Kinova</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data Collection with Physiological Sensors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#delsys-api">Delsys API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-up-the-api">Setting up the API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../m5/integrationwrobots.html">Integration with Robotics</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Additional Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../m6/troubleshooting.html">Troubleshooting Resources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #292929                    " >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">RobotSensorIntegration</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Data Collection with Physiological Sensors</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/content/m4/physiologicalsensors.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../m2/robotic_setup.html" class="btn btn-neutral float-left" title="Getting Started with Kinova" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../m5/integrationwrobots.html" class="btn btn-neutral float-right" title="Integration with Robotics" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="data-collection-with-physiological-sensors">
+<h1>Data Collection with Physiological Sensors<a class="headerlink" href="#data-collection-with-physiological-sensors" title="Permalink to this heading"></a></h1>
+<p>In this section, we explore how to collect data using physiological sensors, specifically Surface Electromyography (sEMGs) sensors to communicate with the robot.
+We will be using the Delsys Trigno Avanti system in this tutorial. We do not go over an introduction of these sensors in this tutorial, but we have in our VR <a class="reference external" href="https://tarstutorials.github.io/vrsensorint/content/m3/intro_to_sensors.html">tutorials</a>. If you’re unfamiliar with these types of sensors, we highly recommend reviewing that first.</p>
+<section id="delsys-api">
+<h2>Delsys API<a class="headerlink" href="#delsys-api" title="Permalink to this heading"></a></h2>
+<p>We use the Delsys <a class="reference external" href="https://delsys.com/trigno-avanti/">Trigno Avanti</a>, which is the “standard” sEMG sensor used in our setup.
+There are twoways you can use the sensors,
+#. The Delsys Software: Trigno Discover</p>
+<blockquote>
+<div><p>This is the main option for using the sensor, which provides a user-friendly GUI for the sensors and a way to collect the data.
+.. note:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">We</span> <span class="n">won</span><span class="s1">&#39;t be using this option in this tutorial, but if you would like to learn more about this option, we cover setup instructions in our `VR tutorial &lt;https://tarstutorials.github.io/vrsensorint/content/m4/data_collection.html&gt;`_.</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>The Delsys API</dt><dd><p>We will be using the Delsys API, which allows you to communicate with your Trigno System and sensors. This will allow you to get all of the data which your sensors read and output it the way you want in Python.</p>
+</dd>
+</dl>
+</li>
+</ol>
+</section>
+<section id="setting-up-the-api">
+<h2>Setting up the API<a class="headerlink" href="#setting-up-the-api" title="Permalink to this heading"></a></h2>
+<p>To get stated with the Delsys API, we have to clone it from the Delsys <a class="reference external" href="https://github.com/delsys-inc/Example-Applications">github</a> and install the necessary dependencies.</p>
+<p>Heres how to do that:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Open your project in vscode or your preferred editor</p></li>
+<li><p>Open the terminal and paste:</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">delsys</span><span class="o">-</span><span class="n">inc</span><span class="o">/</span><span class="n">Example</span><span class="o">-</span><span class="n">Applications</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+<p>Once the repository is cloned, you will see a folder named <strong>Example-Applications</strong> in your project directory.
+This folder will have a python folder inside which is what we will be focusing on.</p>
+<p>You will want to change directories into Example-Applications and the Python directory with</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">Example</span><span class="o">-</span><span class="n">Applications</span><span class="o">/</span><span class="n">Python</span>
+</pre></div>
+</div>
+<p>Once you are in the Python directory, you will want to install the required dependencies using:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>Once this is installed, you should copy and paste your key/license strings that was provided to you by Delsys Inc. in /AeroPy/TrignoBase.py.</p>
+<p>If you plug in your Trigno base station you can run the demo with:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">DelsysPythonDemo</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>This demo shows live data being collected from your sensors. Feel free to explore and modify it to get a better sense of how the system works. If you have questions about them feel free to contact the authors.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../m2/robotic_setup.html" class="btn btn-neutral float-left" title="Getting Started with Kinova" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../m5/integrationwrobots.html" class="btn btn-neutral float-right" title="Integration with Robotics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

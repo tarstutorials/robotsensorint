@@ -1,0 +1,605 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Getting Started with Kinova &mdash; RobotSensorIntegration 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+
+  
+    <link rel="shortcut icon" href="../../_static/tars_logo_sq.png"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=e031e9a9"></script>
+      <script src="../../_static/doctools.js?v=888ff710"></script>
+      <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="https://cdn.jsdelivr.net/gh/bonartm/quizdown-js@latest/public/build/quizdown.js"></script>
+      <script>quizdown.init({"primary_color": "#31b457", "quizdown_js": "https://cdn.jsdelivr.net/gh/bonartm/quizdown-js@latest/public/build/quizdown.js"});</script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Data Collection with Physiological Sensors" href="../m4/physiologicalsensors.html" />
+    <link rel="prev" title="Contact the Authors" href="../m1/contact_page.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #292929                    " >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            RobotSensorIntegration
+              <img src="../../_static/tars_logo_sq.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../m1/introduction.html">Introduction to the course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../m1/contact_page.html">Contact the Authors</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorial Modules</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started with Kinova</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#connecting-to-the-robot">Connecting to the Robot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#downloading-kinova-kortex-api">Downloading Kinova Kortex API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-a-project-folder">Creating a Project Folder</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../m4/physiologicalsensors.html">Data Collection with Physiological Sensors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../m5/integrationwrobots.html">Integration with Robotics</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Additional Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../m6/troubleshooting.html">Troubleshooting Resources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #292929                    " >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">RobotSensorIntegration</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Getting Started with Kinova</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/content/m2/robotic_setup.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../m1/contact_page.html" class="btn btn-neutral float-left" title="Contact the Authors" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../m4/physiologicalsensors.html" class="btn btn-neutral float-right" title="Data Collection with Physiological Sensors" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="getting-started-with-kinova">
+<h1>Getting Started with Kinova<a class="headerlink" href="#getting-started-with-kinova" title="Permalink to this heading"></a></h1>
+<p>In these tutorials we will be using the Kinova 7DoF Gen3 Robotic arm. If you are using a Kinova arm, this part of the tutorial will be beneficial to set up the basics of connecting to the robot and downloading the Kinova Kortex API.
+If you would like to lean more about the Kinova Gen 3, you can head to their <a class="reference external" href="https://www.kinovarobotics.com/product/gen3-robots">website</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For this tutorial, the authors use the python version of the Kinova Kortex Api. For C++ users, please refer to the quick start <a class="reference external" href="https://github.com/Kinovarobotics/Kinova-kortex2_Gen3_G3L?tab=readme-ov-file#quick-start-for-c-users">guide</a>.</p>
+</div>
+<section id="connecting-to-the-robot">
+<h2>Connecting to the Robot<a class="headerlink" href="#connecting-to-the-robot" title="Permalink to this heading"></a></h2>
+<p>Kinova provides a great <a class="reference external" href="https://drive.google.com/file/d/1vZHA3fQS3-5kkncsnYLjH8qAFj4wS6PJ/view">quick start guide</a> that covers everything you need to know to configure your computer and establish a connection with the robot.
+If you never have used a Kinova Robot, this guide will help you setup your network and robot.</p>
+</section>
+<section id="downloading-kinova-kortex-api">
+<h2>Downloading Kinova Kortex API<a class="headerlink" href="#downloading-kinova-kortex-api" title="Permalink to this heading"></a></h2>
+<p>For this tutorial we will be using Python 3.8.10 and Kortex Kortex Python API.
+If you don’t have Python 3.8.10 installed, please refer to the <a class="reference external" href="https://www.python.org/downloads/release/python-3810/">Python website</a>.</p>
+<p>To begin, download the API .whl file using this <a class="reference external" href="https://artifactory.kinovaapps.com/ui/native/generic-public/kortex/API/2.6.0/kortex_api-2.6.0.post3-py3-none-any.whl">link</a>.</p>
+</section>
+<section id="creating-a-project-folder">
+<h2>Creating a Project Folder<a class="headerlink" href="#creating-a-project-folder" title="Permalink to this heading"></a></h2>
+<p>For these tutorials, we will setup a single project folder to organize all your scripts and example code.
+I’ll be using Visual Studio Code, but you’re welcome to use any editor you prefer.</p>
+<p>Here are the steps to create your project folder and get started:</p>
+<ol class="arabic">
+<li><p>Open your terminal</p></li>
+<li><p>Create a new folder for your project</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">RobotSensorIntegration</span>
+<span class="n">cd</span> <span class="n">RobotSensorIntegration</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Open the folder in Visual Studio Code</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">code</span> <span class="o">.</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+<p>This will open your project in vs Code.
+From here we will create a virtual environment to manage python packages. Since this project will involve several pip installations, using a virual environment will help prevent conflicts with other projects.</p>
+<ol class="arabic">
+<li><p>Start by being inside your project folder (RobotSensorIntegration)</p></li>
+<li><p>In your terminal write:</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">venv</span> <span class="n">myenv</span>
+</pre></div>
+</div>
+<p>This creates a virtual environment named myenv using Python 3.8.10</p>
+</div></blockquote>
+</li>
+<li><p>Activate your environment using:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">.</span>\<span class="n">myenv</span>\<span class="n">Scripts</span>\<span class="n">activate</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>Now that we have the virtual environment setup, you will want to install the .whl file.
+Here is the code to install that:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">&lt;</span><span class="n">whl</span> <span class="n">fullpath</span> <span class="n">name</span><span class="o">&gt;.</span><span class="n">whl</span>
+</pre></div>
+</div>
+<p>Now that we have the API installed, we can download the examples.
+The three examples that are important are API creation, gripper commands, and cartesian waypoint trajectories.
+You will eventually combine all of these into a single script when we bring in the sensor data, so its a good idea to understand how each one works on its own first.
+For now, copy these example scripts into your RobotSensorIntegration folder:</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#API CREATION</span>
+
+<span class="c1">#! /usr/bin/env python3</span>
+
+<span class="c1">###</span>
+<span class="c1"># KINOVA (R) KORTEX (TM)</span>
+<span class="c1">#</span>
+<span class="c1"># Copyright (c) 2018 Kinova inc. All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This software may be modified and distributed</span>
+<span class="c1"># under the under the terms of the BSD 3-Clause license.</span>
+<span class="c1">#</span>
+<span class="c1"># Refer to the LICENSE file for details.</span>
+<span class="c1">#</span>
+<span class="c1">###</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="kn">from</span> <span class="nn">kortex_api.TCPTransport</span> <span class="kn">import</span> <span class="n">TCPTransport</span>
+<span class="kn">from</span> <span class="nn">kortex_api.RouterClient</span> <span class="kn">import</span> <span class="n">RouterClient</span>
+<span class="kn">from</span> <span class="nn">kortex_api.SessionManager</span> <span class="kn">import</span> <span class="n">SessionManager</span>
+
+<span class="kn">from</span> <span class="nn">kortex_api.autogen.client_stubs.DeviceConfigClientRpc</span> <span class="kn">import</span> <span class="n">DeviceConfigClient</span>
+<span class="kn">from</span> <span class="nn">kortex_api.autogen.client_stubs.BaseClientRpc</span> <span class="kn">import</span> <span class="n">BaseClient</span>
+
+<span class="kn">from</span> <span class="nn">kortex_api.autogen.messages</span> <span class="kn">import</span> <span class="n">DeviceConfig_pb2</span><span class="p">,</span> <span class="n">Session_pb2</span><span class="p">,</span> <span class="n">Base_pb2</span>
+
+<span class="k">def</span> <span class="nf">example_api_creation</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    This function creates all required objects and connections to use the arm&#39;s services.</span>
+<span class="sd">    It is easier to use the DeviceConnection utility class to create the router and then</span>
+<span class="sd">    create the services you need (as done in the other examples).</span>
+<span class="sd">    However, if you want to create all objects yourself, this function tells you how to do it.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="n">PORT</span> <span class="o">=</span> <span class="mi">10000</span>
+
+    <span class="c1"># Setup API</span>
+    <span class="n">error_callback</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">kException</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;_________ callback error _________ </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">kException</span><span class="p">))</span>
+    <span class="n">transport</span> <span class="o">=</span> <span class="n">TCPTransport</span><span class="p">()</span>
+    <span class="n">router</span> <span class="o">=</span> <span class="n">RouterClient</span><span class="p">(</span><span class="n">transport</span><span class="p">,</span> <span class="n">error_callback</span><span class="p">)</span>
+    <span class="n">transport</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">ip</span><span class="p">,</span> <span class="n">PORT</span><span class="p">)</span>
+
+    <span class="c1"># Create session</span>
+    <span class="n">session_info</span> <span class="o">=</span> <span class="n">Session_pb2</span><span class="o">.</span><span class="n">CreateSessionInfo</span><span class="p">()</span>
+    <span class="n">session_info</span><span class="o">.</span><span class="n">username</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">username</span>
+    <span class="n">session_info</span><span class="o">.</span><span class="n">password</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">password</span>
+    <span class="n">session_info</span><span class="o">.</span><span class="n">session_inactivity_timeout</span> <span class="o">=</span> <span class="mi">60000</span>   <span class="c1"># (milliseconds)</span>
+    <span class="n">session_info</span><span class="o">.</span><span class="n">connection_inactivity_timeout</span> <span class="o">=</span> <span class="mi">2000</span> <span class="c1"># (milliseconds)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Creating session for communication&quot;</span><span class="p">)</span>
+    <span class="n">session_manager</span> <span class="o">=</span> <span class="n">SessionManager</span><span class="p">(</span><span class="n">router</span><span class="p">)</span>
+    <span class="n">session_manager</span><span class="o">.</span><span class="n">CreateSession</span><span class="p">(</span><span class="n">session_info</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Session created&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Create required services</span>
+    <span class="n">device_config</span> <span class="o">=</span> <span class="n">DeviceConfigClient</span><span class="p">(</span><span class="n">router</span><span class="p">)</span>
+    <span class="n">base</span> <span class="o">=</span> <span class="n">BaseClient</span><span class="p">(</span><span class="n">router</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">device_config</span><span class="o">.</span><span class="n">GetDeviceType</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">base</span><span class="o">.</span><span class="n">GetArmState</span><span class="p">())</span>
+
+    <span class="c1"># Close API session</span>
+    <span class="n">session_manager</span><span class="o">.</span><span class="n">CloseSession</span><span class="p">()</span>
+
+    <span class="c1"># Disconnect from the transport object</span>
+    <span class="n">transport</span><span class="o">.</span><span class="n">disconnect</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># Import the utilities helper module</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span> <span class="s2">&quot;..&quot;</span><span class="p">))</span>
+    <span class="kn">import</span> <span class="nn">utilities</span>
+
+    <span class="c1"># Parse arguments</span>
+    <span class="n">args</span> <span class="o">=</span> <span class="n">utilities</span><span class="o">.</span><span class="n">parseConnectionArguments</span><span class="p">()</span>
+
+    <span class="c1"># Example core</span>
+    <span class="n">example_api_creation</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># GRIPPER COMMANDS</span>
+
+<span class="c1">#! /usr/bin/env python3</span>
+
+<span class="c1">###</span>
+<span class="c1"># KINOVA (R) KORTEX (TM)</span>
+<span class="c1">#</span>
+<span class="c1"># Copyright (c) 2019 Kinova inc. All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This software may be modified and distributed under the</span>
+<span class="c1"># terms of the BSD 3-Clause license.</span>
+<span class="c1">#</span>
+<span class="c1"># Refer to the LICENSE file for details.</span>
+<span class="c1">#</span>
+<span class="c1">###</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="kn">from</span> <span class="nn">kortex_api.autogen.client_stubs.BaseClientRpc</span> <span class="kn">import</span> <span class="n">BaseClient</span>
+<span class="kn">from</span> <span class="nn">kortex_api.autogen.messages</span> <span class="kn">import</span> <span class="n">Base_pb2</span>
+
+<span class="k">class</span> <span class="nc">GripperCommandExample</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">router</span><span class="p">,</span> <span class="n">proportional_gain</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">proportional_gain</span> <span class="o">=</span> <span class="n">proportional_gain</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">router</span> <span class="o">=</span> <span class="n">router</span>
+
+        <span class="c1"># Create base client using TCP router</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">base</span> <span class="o">=</span> <span class="n">BaseClient</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">router</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">ExampleSendGripperCommands</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="c1"># Create the GripperCommand we will send</span>
+        <span class="n">gripper_command</span> <span class="o">=</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">GripperCommand</span><span class="p">()</span>
+        <span class="n">finger</span> <span class="o">=</span> <span class="n">gripper_command</span><span class="o">.</span><span class="n">gripper</span><span class="o">.</span><span class="n">finger</span><span class="o">.</span><span class="n">add</span><span class="p">()</span>
+
+        <span class="c1"># Close the gripper with position increments</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Performing gripper test in position...&quot;</span><span class="p">)</span>
+        <span class="n">gripper_command</span><span class="o">.</span><span class="n">mode</span> <span class="o">=</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">GRIPPER_POSITION</span>
+        <span class="n">position</span> <span class="o">=</span> <span class="mf">0.00</span>
+        <span class="n">finger</span><span class="o">.</span><span class="n">finger_identifier</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">while</span> <span class="n">position</span> <span class="o">&lt;</span> <span class="mf">1.0</span><span class="p">:</span>
+            <span class="n">finger</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">position</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Going to position </span><span class="si">{:0.2f}</span><span class="s2">...&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">finger</span><span class="o">.</span><span class="n">value</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">base</span><span class="o">.</span><span class="n">SendGripperCommand</span><span class="p">(</span><span class="n">gripper_command</span><span class="p">)</span>
+            <span class="n">position</span> <span class="o">+=</span> <span class="mf">0.1</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="c1"># Set speed to open gripper</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Opening gripper using speed command...&quot;</span><span class="p">)</span>
+        <span class="n">gripper_command</span><span class="o">.</span><span class="n">mode</span> <span class="o">=</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">GRIPPER_SPEED</span>
+        <span class="n">finger</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mf">0.1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">base</span><span class="o">.</span><span class="n">SendGripperCommand</span><span class="p">(</span><span class="n">gripper_command</span><span class="p">)</span>
+        <span class="n">gripper_request</span> <span class="o">=</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">GripperRequest</span><span class="p">()</span>
+
+        <span class="c1"># Wait for reported position to be opened</span>
+        <span class="n">gripper_request</span><span class="o">.</span><span class="n">mode</span> <span class="o">=</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">GRIPPER_POSITION</span>
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">gripper_measure</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">base</span><span class="o">.</span><span class="n">GetMeasuredGripperMovement</span><span class="p">(</span><span class="n">gripper_request</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">len</span> <span class="p">(</span><span class="n">gripper_measure</span><span class="o">.</span><span class="n">finger</span><span class="p">):</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Current position is : </span><span class="si">{0}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">gripper_measure</span><span class="o">.</span><span class="n">finger</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">))</span>
+                <span class="k">if</span> <span class="n">gripper_measure</span><span class="o">.</span><span class="n">finger</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">value</span> <span class="o">&lt;</span> <span class="mf">0.01</span><span class="p">:</span>
+                    <span class="k">break</span>
+            <span class="k">else</span><span class="p">:</span> <span class="c1"># Else, no finger present in answer, end loop</span>
+                <span class="k">break</span>
+
+        <span class="c1"># Set speed to close gripper</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Closing gripper using speed command...&quot;</span><span class="p">)</span>
+        <span class="n">gripper_command</span><span class="o">.</span><span class="n">mode</span> <span class="o">=</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">GRIPPER_SPEED</span>
+        <span class="n">finger</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">base</span><span class="o">.</span><span class="n">SendGripperCommand</span><span class="p">(</span><span class="n">gripper_command</span><span class="p">)</span>
+
+        <span class="c1"># Wait for reported speed to be 0</span>
+        <span class="n">gripper_request</span><span class="o">.</span><span class="n">mode</span> <span class="o">=</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">GRIPPER_SPEED</span>
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">gripper_measure</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">base</span><span class="o">.</span><span class="n">GetMeasuredGripperMovement</span><span class="p">(</span><span class="n">gripper_request</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">len</span> <span class="p">(</span><span class="n">gripper_measure</span><span class="o">.</span><span class="n">finger</span><span class="p">):</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Current speed is : </span><span class="si">{0}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">gripper_measure</span><span class="o">.</span><span class="n">finger</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">))</span>
+                <span class="k">if</span> <span class="n">gripper_measure</span><span class="o">.</span><span class="n">finger</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="mf">0.0</span><span class="p">:</span>
+                    <span class="k">break</span>
+            <span class="k">else</span><span class="p">:</span> <span class="c1"># Else, no finger present in answer, end loop</span>
+                <span class="k">break</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># Import the utilities helper module</span>
+    <span class="kn">import</span> <span class="nn">argparse</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span> <span class="s2">&quot;..&quot;</span><span class="p">))</span>
+    <span class="kn">import</span> <span class="nn">utilities</span>
+
+    <span class="c1"># Parse arguments</span>
+    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">()</span>
+    <span class="n">args</span> <span class="o">=</span> <span class="n">utilities</span><span class="o">.</span><span class="n">parseConnectionArguments</span><span class="p">(</span><span class="n">parser</span><span class="p">)</span>
+
+    <span class="c1"># Create connection to the device and get the router</span>
+    <span class="k">with</span> <span class="n">utilities</span><span class="o">.</span><span class="n">DeviceConnection</span><span class="o">.</span><span class="n">createTcpConnection</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="k">as</span> <span class="n">router</span><span class="p">:</span>
+
+        <span class="n">example</span> <span class="o">=</span> <span class="n">GripperCommandExample</span><span class="p">(</span><span class="n">router</span><span class="p">)</span>
+        <span class="n">example</span><span class="o">.</span><span class="n">ExampleSendGripperCommands</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># CARTESIAN WAYPOINTS TRAJECTORY</span>
+
+<span class="c1">#! /usr/bin/env python3</span>
+
+<span class="c1">###</span>
+<span class="c1"># KINOVA (R) KORTEX (TM)</span>
+<span class="c1">#</span>
+<span class="c1"># Copyright (c) 2021 Kinova inc. All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This software may be modified and distributed</span>
+<span class="c1"># under the terms of the BSD 3-Clause license.</span>
+<span class="c1">#</span>
+<span class="c1"># Refer to the LICENSE file for details.</span>
+<span class="c1">#</span>
+<span class="c1">###</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">threading</span>
+
+<span class="kn">from</span> <span class="nn">kortex_api.autogen.client_stubs.BaseClientRpc</span> <span class="kn">import</span> <span class="n">BaseClient</span>
+<span class="kn">from</span> <span class="nn">kortex_api.autogen.client_stubs.BaseCyclicClientRpc</span> <span class="kn">import</span> <span class="n">BaseCyclicClient</span>
+
+
+<span class="kn">from</span> <span class="nn">kortex_api.autogen.messages</span> <span class="kn">import</span> <span class="n">Base_pb2</span><span class="p">,</span> <span class="n">BaseCyclic_pb2</span><span class="p">,</span> <span class="n">Common_pb2</span>
+
+<span class="c1"># Maximum allowed waiting time during actions (in seconds)</span>
+<span class="n">TIMEOUT_DURATION</span> <span class="o">=</span> <span class="mi">30</span>
+
+<span class="c1"># Create closure to set an event after an END or an ABORT</span>
+<span class="k">def</span> <span class="nf">check_for_end_or_abort</span><span class="p">(</span><span class="n">e</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return a closure checking for END or ABORT notifications</span>
+
+<span class="sd">    Arguments:</span>
+<span class="sd">    e -- event to signal when the action is completed</span>
+<span class="sd">        (will be set when an END or ABORT occurs)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="n">notification</span><span class="p">,</span> <span class="n">e</span> <span class="o">=</span> <span class="n">e</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;EVENT : &quot;</span> <span class="o">+</span> \
+              <span class="n">Base_pb2</span><span class="o">.</span><span class="n">ActionEvent</span><span class="o">.</span><span class="n">Name</span><span class="p">(</span><span class="n">notification</span><span class="o">.</span><span class="n">action_event</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">notification</span><span class="o">.</span><span class="n">action_event</span> <span class="o">==</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">ACTION_END</span> \
+        <span class="ow">or</span> <span class="n">notification</span><span class="o">.</span><span class="n">action_event</span> <span class="o">==</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">ACTION_ABORT</span><span class="p">:</span>
+            <span class="n">e</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">check</span>
+
+<span class="k">def</span> <span class="nf">example_move_to_home_position</span><span class="p">(</span><span class="n">base</span><span class="p">):</span>
+    <span class="c1"># Make sure the arm is in Single Level Servoing mode</span>
+    <span class="n">base_servo_mode</span> <span class="o">=</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">ServoingModeInformation</span><span class="p">()</span>
+    <span class="n">base_servo_mode</span><span class="o">.</span><span class="n">servoing_mode</span> <span class="o">=</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">SINGLE_LEVEL_SERVOING</span>
+    <span class="n">base</span><span class="o">.</span><span class="n">SetServoingMode</span><span class="p">(</span><span class="n">base_servo_mode</span><span class="p">)</span>
+
+    <span class="c1"># Move arm to ready position</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Moving the arm to a safe position&quot;</span><span class="p">)</span>
+    <span class="n">action_type</span> <span class="o">=</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">RequestedActionType</span><span class="p">()</span>
+    <span class="n">action_type</span><span class="o">.</span><span class="n">action_type</span> <span class="o">=</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">REACH_JOINT_ANGLES</span>
+    <span class="n">action_list</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">ReadAllActions</span><span class="p">(</span><span class="n">action_type</span><span class="p">)</span>
+    <span class="n">action_handle</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">for</span> <span class="n">action</span> <span class="ow">in</span> <span class="n">action_list</span><span class="o">.</span><span class="n">action_list</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">action</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;Home&quot;</span><span class="p">:</span>
+            <span class="n">action_handle</span> <span class="o">=</span> <span class="n">action</span><span class="o">.</span><span class="n">handle</span>
+
+    <span class="k">if</span> <span class="n">action_handle</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Can&#39;t reach safe position. Exiting&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="n">e</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Event</span><span class="p">()</span>
+    <span class="n">notification_handle</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">OnNotificationActionTopic</span><span class="p">(</span>
+        <span class="n">check_for_end_or_abort</span><span class="p">(</span><span class="n">e</span><span class="p">),</span>
+        <span class="n">Base_pb2</span><span class="o">.</span><span class="n">NotificationOptions</span><span class="p">()</span>
+    <span class="p">)</span>
+
+    <span class="n">base</span><span class="o">.</span><span class="n">ExecuteActionFromReference</span><span class="p">(</span><span class="n">action_handle</span><span class="p">)</span>
+    <span class="n">finished</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="n">TIMEOUT_DURATION</span><span class="p">)</span>
+    <span class="n">base</span><span class="o">.</span><span class="n">Unsubscribe</span><span class="p">(</span><span class="n">notification_handle</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">finished</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Safe position reached&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Timeout on action notification wait&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">finished</span>
+<span class="k">def</span> <span class="nf">populateCartesianCoordinate</span><span class="p">(</span><span class="n">waypointInformation</span><span class="p">):</span>
+
+    <span class="n">waypoint</span> <span class="o">=</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">CartesianWaypoint</span><span class="p">()</span>
+    <span class="n">waypoint</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">waypointInformation</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">waypoint</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">waypointInformation</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">waypoint</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="n">waypointInformation</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">waypoint</span><span class="o">.</span><span class="n">blending_radius</span> <span class="o">=</span> <span class="n">waypointInformation</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+    <span class="n">waypoint</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">theta_x</span> <span class="o">=</span> <span class="n">waypointInformation</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+    <span class="n">waypoint</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">theta_y</span> <span class="o">=</span> <span class="n">waypointInformation</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+    <span class="n">waypoint</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">theta_z</span> <span class="o">=</span> <span class="n">waypointInformation</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
+    <span class="n">waypoint</span><span class="o">.</span><span class="n">reference_frame</span> <span class="o">=</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">CARTESIAN_REFERENCE_FRAME_BASE</span>
+
+    <span class="k">return</span> <span class="n">waypoint</span>
+
+<span class="k">def</span> <span class="nf">example_trajectory</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">base_cyclic</span><span class="p">):</span>
+
+    <span class="n">base_servo_mode</span> <span class="o">=</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">ServoingModeInformation</span><span class="p">()</span>
+    <span class="n">base_servo_mode</span><span class="o">.</span><span class="n">servoing_mode</span> <span class="o">=</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">SINGLE_LEVEL_SERVOING</span>
+    <span class="n">base</span><span class="o">.</span><span class="n">SetServoingMode</span><span class="p">(</span><span class="n">base_servo_mode</span><span class="p">)</span>
+    <span class="n">product</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetProductConfiguration</span><span class="p">()</span>
+    <span class="n">waypointsDefinition</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">tuple</span><span class="p">())</span>
+    <span class="k">if</span><span class="p">(</span>   <span class="n">product</span><span class="o">.</span><span class="n">model</span> <span class="o">==</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">ProductConfiguration__pb2</span><span class="o">.</span><span class="n">MODEL_ID_L53</span>
+       <span class="ow">or</span> <span class="n">product</span><span class="o">.</span><span class="n">model</span> <span class="o">==</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">ProductConfiguration__pb2</span><span class="o">.</span><span class="n">MODEL_ID_L31</span><span class="p">):</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">product</span><span class="o">.</span><span class="n">model</span> <span class="o">==</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">ProductConfiguration__pb2</span><span class="o">.</span><span class="n">MODEL_ID_L31</span><span class="p">):</span>
+            <span class="n">kTheta_x</span> <span class="o">=</span> <span class="mf">90.6</span>
+            <span class="n">kTheta_y</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.0</span>
+            <span class="n">kTheta_z</span> <span class="o">=</span> <span class="mf">150.0</span>
+            <span class="n">waypointsDefinition</span> <span class="o">=</span> <span class="p">(</span> <span class="p">(</span><span class="mf">0.439</span><span class="p">,</span>  <span class="mf">0.194</span><span class="p">,</span> <span class="mf">0.448</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">kTheta_x</span><span class="p">,</span> <span class="n">kTheta_y</span><span class="p">,</span> <span class="n">kTheta_z</span><span class="p">),</span>
+                                    <span class="p">(</span><span class="mf">0.200</span><span class="p">,</span>  <span class="mf">0.150</span><span class="p">,</span> <span class="mf">0.400</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">kTheta_x</span><span class="p">,</span> <span class="n">kTheta_y</span><span class="p">,</span> <span class="n">kTheta_z</span><span class="p">),</span>
+                                    <span class="p">(</span><span class="mf">0.350</span><span class="p">,</span>  <span class="mf">0.050</span><span class="p">,</span> <span class="mf">0.300</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">kTheta_x</span><span class="p">,</span> <span class="n">kTheta_y</span><span class="p">,</span> <span class="n">kTheta_z</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">kTheta_x</span> <span class="o">=</span> <span class="mf">90.0</span>
+            <span class="n">kTheta_y</span> <span class="o">=</span> <span class="mf">0.0</span>
+            <span class="n">kTheta_z</span> <span class="o">=</span> <span class="mf">90.0</span>
+            <span class="n">waypointsDefinition</span> <span class="o">=</span> <span class="p">(</span> <span class="p">(</span><span class="mf">0.7</span><span class="p">,</span>   <span class="mf">0.0</span><span class="p">,</span>  <span class="mf">0.5</span><span class="p">,</span>  <span class="mf">0.0</span><span class="p">,</span> <span class="n">kTheta_x</span><span class="p">,</span> <span class="n">kTheta_y</span><span class="p">,</span> <span class="n">kTheta_z</span><span class="p">),</span>
+                                    <span class="p">(</span><span class="mf">0.7</span><span class="p">,</span>   <span class="mf">0.0</span><span class="p">,</span>  <span class="mf">0.33</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">kTheta_x</span><span class="p">,</span> <span class="n">kTheta_y</span><span class="p">,</span> <span class="n">kTheta_z</span><span class="p">),</span>
+                                    <span class="p">(</span><span class="mf">0.7</span><span class="p">,</span>   <span class="mf">0.48</span><span class="p">,</span> <span class="mf">0.33</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">kTheta_x</span><span class="p">,</span> <span class="n">kTheta_y</span><span class="p">,</span> <span class="n">kTheta_z</span><span class="p">),</span>
+                                    <span class="p">(</span><span class="mf">0.61</span><span class="p">,</span>  <span class="mf">0.22</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span>  <span class="mf">0.1</span><span class="p">,</span> <span class="n">kTheta_x</span><span class="p">,</span> <span class="n">kTheta_y</span><span class="p">,</span> <span class="n">kTheta_z</span><span class="p">),</span>
+                                    <span class="p">(</span><span class="mf">0.7</span><span class="p">,</span>   <span class="mf">0.48</span><span class="p">,</span> <span class="mf">0.33</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">kTheta_x</span><span class="p">,</span> <span class="n">kTheta_y</span><span class="p">,</span> <span class="n">kTheta_z</span><span class="p">),</span>
+                                    <span class="p">(</span><span class="mf">0.63</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.22</span><span class="p">,</span> <span class="mf">0.45</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">kTheta_x</span><span class="p">,</span> <span class="n">kTheta_y</span><span class="p">,</span> <span class="n">kTheta_z</span><span class="p">),</span>
+                                    <span class="p">(</span><span class="mf">0.65</span><span class="p">,</span>  <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.33</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">kTheta_x</span><span class="p">,</span> <span class="n">kTheta_y</span><span class="p">,</span> <span class="n">kTheta_z</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Product is not compatible to run this example please contact support with KIN number bellow&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Product KIN is : &quot;</span> <span class="o">+</span> <span class="n">product</span><span class="o">.</span><span class="n">kin</span><span class="p">())</span>
+
+
+    <span class="n">waypoints</span> <span class="o">=</span> <span class="n">Base_pb2</span><span class="o">.</span><span class="n">WaypointList</span><span class="p">()</span>
+
+    <span class="n">waypoints</span><span class="o">.</span><span class="n">duration</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="n">waypoints</span><span class="o">.</span><span class="n">use_optimal_blending</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">waypointDefinition</span> <span class="ow">in</span> <span class="n">waypointsDefinition</span><span class="p">:</span>
+        <span class="n">waypoint</span> <span class="o">=</span> <span class="n">waypoints</span><span class="o">.</span><span class="n">waypoints</span><span class="o">.</span><span class="n">add</span><span class="p">()</span>
+        <span class="n">waypoint</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;waypoint_&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+        <span class="n">waypoint</span><span class="o">.</span><span class="n">cartesian_waypoint</span><span class="o">.</span><span class="n">CopyFrom</span><span class="p">(</span><span class="n">populateCartesianCoordinate</span><span class="p">(</span><span class="n">waypointDefinition</span><span class="p">))</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="n">index</span> <span class="o">+</span> <span class="mi">1</span>
+
+    <span class="c1"># Verify validity of waypoints</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">ValidateWaypointList</span><span class="p">(</span><span class="n">waypoints</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">trajectory_error_report</span><span class="o">.</span><span class="n">trajectory_error_elements</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="n">e</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Event</span><span class="p">()</span>
+        <span class="n">notification_handle</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">OnNotificationActionTopic</span><span class="p">(</span>   <span class="n">check_for_end_or_abort</span><span class="p">(</span><span class="n">e</span><span class="p">),</span>
+                                                                <span class="n">Base_pb2</span><span class="o">.</span><span class="n">NotificationOptions</span><span class="p">())</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Moving cartesian trajectory...&quot;</span><span class="p">)</span>
+
+        <span class="n">base</span><span class="o">.</span><span class="n">ExecuteWaypointTrajectory</span><span class="p">(</span><span class="n">waypoints</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Waiting for trajectory to finish ...&quot;</span><span class="p">)</span>
+        <span class="n">finished</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="n">TIMEOUT_DURATION</span><span class="p">)</span>
+        <span class="n">base</span><span class="o">.</span><span class="n">Unsubscribe</span><span class="p">(</span><span class="n">notification_handle</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">finished</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cartesian trajectory with no optimization completed &quot;</span><span class="p">)</span>
+            <span class="n">e_opt</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Event</span><span class="p">()</span>
+            <span class="n">notification_handle_opt</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">OnNotificationActionTopic</span><span class="p">(</span>   <span class="n">check_for_end_or_abort</span><span class="p">(</span><span class="n">e_opt</span><span class="p">),</span>
+                                                                <span class="n">Base_pb2</span><span class="o">.</span><span class="n">NotificationOptions</span><span class="p">())</span>
+
+            <span class="n">waypoints</span><span class="o">.</span><span class="n">use_optimal_blending</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="n">base</span><span class="o">.</span><span class="n">ExecuteWaypointTrajectory</span><span class="p">(</span><span class="n">waypoints</span><span class="p">)</span>
+
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Waiting for trajectory to finish ...&quot;</span><span class="p">)</span>
+            <span class="n">finished_opt</span> <span class="o">=</span> <span class="n">e_opt</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="n">TIMEOUT_DURATION</span><span class="p">)</span>
+            <span class="n">base</span><span class="o">.</span><span class="n">Unsubscribe</span><span class="p">(</span><span class="n">notification_handle_opt</span><span class="p">)</span>
+
+            <span class="k">if</span><span class="p">(</span><span class="n">finished_opt</span><span class="p">):</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cartesian trajectory with optimization completed &quot;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Timeout on action notification wait for optimized trajectory&quot;</span><span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">finished_opt</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Timeout on action notification wait for non-optimized trajectory&quot;</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">finished</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error found in trajectory&quot;</span><span class="p">)</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">trajectory_error_report</span><span class="o">.</span><span class="n">PrintDebugString</span><span class="p">();</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+
+    <span class="c1"># Import the utilities helper module</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span> <span class="s2">&quot;..&quot;</span><span class="p">))</span>
+    <span class="kn">import</span> <span class="nn">utilities</span>
+
+    <span class="c1"># Parse arguments</span>
+    <span class="n">args</span> <span class="o">=</span> <span class="n">utilities</span><span class="o">.</span><span class="n">parseConnectionArguments</span><span class="p">()</span>
+
+    <span class="c1"># Create connection to the device and get the router</span>
+    <span class="k">with</span> <span class="n">utilities</span><span class="o">.</span><span class="n">DeviceConnection</span><span class="o">.</span><span class="n">createTcpConnection</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="k">as</span> <span class="n">router</span><span class="p">:</span>
+
+        <span class="c1"># Create required services</span>
+        <span class="n">base</span> <span class="o">=</span> <span class="n">BaseClient</span><span class="p">(</span><span class="n">router</span><span class="p">)</span>
+        <span class="n">base_cyclic</span> <span class="o">=</span> <span class="n">BaseCyclicClient</span><span class="p">(</span><span class="n">router</span><span class="p">)</span>
+
+
+        <span class="c1"># Example core</span>
+        <span class="n">success</span> <span class="o">=</span> <span class="kc">True</span>
+
+        <span class="n">success</span> <span class="o">&amp;=</span> <span class="n">example_move_to_home_position</span><span class="p">(</span><span class="n">base</span><span class="p">)</span>
+        <span class="n">success</span> <span class="o">&amp;=</span> <span class="n">example_trajectory</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">base_cyclic</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="mi">0</span> <span class="k">if</span> <span class="n">success</span> <span class="k">else</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">exit</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../m1/contact_page.html" class="btn btn-neutral float-left" title="Contact the Authors" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../m4/physiologicalsensors.html" class="btn btn-neutral float-right" title="Data Collection with Physiological Sensors" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
