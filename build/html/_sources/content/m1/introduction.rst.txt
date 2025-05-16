@@ -11,7 +11,8 @@ From there, we will guide you through combining both systems, working with an ex
 While this course centers around the Kinova Gen3 robotic arm, the techniques and principles are applicable to a wide range of robotic systems. 
 We hope you find this resource useful, and that you commit the time and effort to building your skills in these two rapidly growing fields.
 
-Code for this wesbite can be found 'here <https://github.com/tarstutorials/robotsensorint>' on our GitHub page.
+Code for this wesbite can be found on our `Github page <https://github.com/tarstutorials/robotsensorint>`_.
+
 Additionally, the robotic project used in the creation of this site have been uploaded to our GitHub page as well, at `TarsTutorials <https://github.com/tarstutorials>`_. 
 Each project is named with the prefix "robotsensorint-", so that you know which repositories are associated with this website.
 
