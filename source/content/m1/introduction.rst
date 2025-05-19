@@ -13,9 +13,7 @@ We hope you find this resource useful, and that you commit the time and effort t
 
 Code for this wesbite can be found on our `Github page <https://github.com/tarstutorials/robotsensorint>`_.
 
-Additionally, the robotic project used in the creation of this site have been uploaded to our GitHub page as well, at `TarsTutorials <https://github.com/tarstutorials>`_. 
-Each project is named with the prefix "robotsensorint-", so that you know which repositories are associated with this website.
-
+Additionally, the robotic project used in the creation of this site have been uploaded to our GitHub page as well, at `robotsensorint <\https://github.com/Terascale-All-sensing-Research-Studio/robotsensorint>`_. 
 
 .. note::
     This course assumes the reader has some prerequiste knowledge on programming. It will go in-depth into Python packages but will not cover the general Python knowledge needed.

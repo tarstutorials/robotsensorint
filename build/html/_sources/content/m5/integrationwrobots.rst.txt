@@ -12,7 +12,7 @@ Its finally time to combine the Kinova and Delsys API.
 The goal is to create a robot-to-human handover where the robot grabs the object and uses sensor based thresholding to detect when to release the object into your hand.
 
 This section walks you through the entire process, explaining each part of code and its purpose.
-You can follow the steps below or clone the repo to access the complete code.
+You can follow the steps below or clone the `repo <https://github.com/Terascale-All-sensing-Research-Studio/robotsensorint>` to access the complete code.
 
 #. Imports
 
